@@ -2,7 +2,13 @@
   "name": "@fabian-dev-ws/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "test": "npx nx run-many -t test",
+    "build:only": "npx nx build fabianDevWs",
+    "build": "npx nx build fabianDevWs && npx nx run-many -t test",
+    "s": "npx nx build fabianDevWS && npx nx run-many -t test && npx nx serve fabianDevWS",
+    "r": "npx nx serve fabianDevWs"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~19.1.0",
@@ -58,5 +64,6 @@
     "tslib": "^2.3.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.19.0"
-  }
+  },
+  "packageManager": "yarn@4.7.0-rc.43"
 }
